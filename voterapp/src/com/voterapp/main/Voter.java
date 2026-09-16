@@ -14,6 +14,8 @@ public class Voter {
 		IElectionBooth electionBooth =  new ElectionBoothImpl();
 		try {
 			boolean isEligible = electionBooth.checkEligibility(18,"JP Nagar", 1001);
+			int y  = Integer.parseInt("priya");
+			
 			if(isEligible)
 				System.out.println("You are eligible to vote");
 		}catch(UnderAgeException | LocalityNotFoundException| VoterIdNotFoundException  e) {
@@ -23,6 +25,7 @@ public class Voter {
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
 		}
+		System.out.println("done");
 	}
 
 }

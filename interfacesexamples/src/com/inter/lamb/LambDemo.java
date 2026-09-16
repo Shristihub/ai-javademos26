@@ -9,7 +9,7 @@ public class LambDemo {
 		
 		// use lambda - provide the implementaion
 		IShape shape1 = (x, y)->System.out.println("Square "+(x*y));
-		shape1.area(10, 10);
+		shape1.area(10, 10); //calling
 		
 		// rectangle implemattaion
 		IShape rect = (x,y)->System.out.println("Rect "+(x*y));
