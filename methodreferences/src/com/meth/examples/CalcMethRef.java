@@ -16,8 +16,8 @@ public class CalcMethRef {
 		
 //		refer to a non static method - call using object name
 		
-		ICalculator ref1 = proref::product;
-		ref1.calculate(10, 20);
+		ICalculator ref1 = proref::product;// implementation
+		ref1.calculate(10, 20); //calling
 		
 		ref1 = new Processor()::product;
 		ref1.calculate(10, 20);
