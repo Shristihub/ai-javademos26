@@ -2,6 +2,7 @@ package com.bookapp.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.bookapp.exception.BookNotFoundException;
 import com.bookapp.model.Book;
@@ -65,6 +66,7 @@ public class BookServiceImpl implements IBookService {
 //				if yes add the book to the temporary list
 				booksByAuth.add(book);
 		}
+					
 		// throw exception - outside for loop - if list is empty
 		if(booksByAuth.isEmpty()) {
 			throw new BookNotFoundException("book with this auth in category does not exist");
