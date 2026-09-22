@@ -1,8 +1,6 @@
 package com.streams.assignments;
 
-import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class EmpStreams {
 
@@ -59,6 +57,5 @@ public class EmpStreams {
 		  .orElseThrow(()-> new EmployeeNotFoundException("No Emp Found"));
 	    System.out.println(emp1);
 		
-	
 	}
 }
