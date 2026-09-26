@@ -6,9 +6,10 @@ public enum Cuisine {
 	NI("NORTH INDIAN"),
 	IT("ITALIAN"),
 	CH("CHINESE"),
-	CO("CONTINENTAL");
+	CO("CONTINENTAL"); // similar to new Employee("Sripriya");
 
-	private String cuisineType;
+	private String cuisineType;    //similar to instance variable
+	// similar to para constructor of class
 	private Cuisine(String type) {
 		this.cuisineType = type;
 	}

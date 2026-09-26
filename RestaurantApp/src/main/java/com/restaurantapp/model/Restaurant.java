@@ -1,20 +1,20 @@
 package com.restaurantapp.model;
 
-import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class Restaurant {
 
 	private String restaurantName;
 	private Integer restaurantId;
 	private double costForTwo;
-	private String cuisine;
-	private String type;
+	private String cuisine; //CHINESE, SOUTH INDIAN, NORTH INDIAN
+	private String type; // NONVEG, VEG
 	private int ratings;
 	private String city;
 
-//	private LocalDateTime openingTime;
-//	private LocalDateTime closingTime;
-//	
+	private LocalTime openingTime;
+	private LocalTime closingTime;
+	
 	public Restaurant() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -30,6 +30,19 @@ public class Restaurant {
 		this.type = type;
 		this.ratings = ratings;
 		this.city = city;
+	}
+
+	public Restaurant(String restaurantName, double costForTwo, String cuisine, String type, int ratings, String city,
+			LocalTime openingTime, LocalTime closingTime) {
+		super();
+		this.restaurantName = restaurantName;
+		this.costForTwo = costForTwo;
+		this.cuisine = cuisine;
+		this.type = type;
+		this.ratings = ratings;
+		this.city = city;
+		this.openingTime = openingTime;
+		this.closingTime = closingTime;
 	}
 
 	public String getRestaurantName() {
@@ -72,6 +85,22 @@ public class Restaurant {
 		this.type = type;
 	}
 
+	public LocalTime getOpeningTime() {
+		return openingTime;
+	}
+
+	public void setOpeningTime(LocalTime openingTime) {
+		this.openingTime = openingTime;
+	}
+
+	public LocalTime getClosingTime() {
+		return closingTime;
+	}
+
+	public void setClosingTime(LocalTime closingTime) {
+		this.closingTime = closingTime;
+	}
+
 	public int getRatings() {
 		return ratings;
 	}
@@ -87,6 +116,7 @@ public class Restaurant {
 	public void setCity(String city) {
 		this.city = city;
 	}
+	
 
 	@Override
 	public String toString() {

@@ -3,19 +3,24 @@ package com.restaurantapp.service;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import com.restaurantapp.dao.IRestaurantDao;
+import com.restaurantapp.dao.RestaurantDaoImpl;
 import com.restaurantapp.model.Restaurant;
 
 public class RestaurantServiceImpl implements IRestaurantService{
-
+	
+    private IRestaurantDao restaurantDao = new RestaurantDaoImpl();
+	
 	@Override
 	public void addRestaurant(Restaurant restaurant) {
-		// TODO Auto-generated method stub
-		
+		//call the method of dao
+		restaurantDao.addRestaurant(restaurant); 
 	}
 
 	@Override
 	public void updateRestaurant(int restaurantId, double cost) {
-		// TODO Auto-generated method stub
+		//call the method of dao
+		restaurantDao.updateRestaurant(restaurantId, cost);
 		
 	}
 
@@ -33,8 +38,11 @@ public class RestaurantServiceImpl implements IRestaurantService{
 
 	@Override
 	public List<Restaurant> getAllRestaurants() {
-		// TODO Auto-generated method stub
-		return null;
+		//call the method dao
+		List<Restaurant> restaurants = restaurantDao.findAllRestaurants();
+		// sort by name, change the name to upper case and print it
+		
+		return restaurants;
 	}
 
 	@Override
